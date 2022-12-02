@@ -1,15 +1,19 @@
 import React from "react";
-import addPersonCSS from "./AddPerson.module.css";
-import { useSelector, useDispatch } from "react-redux";
+import addPersonCss from "./AddPerson.module.css";
+import { useDispatch } from "react-redux";
 import { addPerson } from "../../redux/actions/peopleAction";
 
-function Addperson() {
+//dispatchの引数にアクションを書くとそのReducerを呼び出すことができる
+
+function AddPerson() {
   const dispatch = useDispatch();
-  <div className={addPersonCSS.AddPerson}>
-    <button onClick={() => dispatch(addPerson(person.payload))}>
-      Add Person
-    </button>
-  </div>;
+
+  return (
+    <div className={addPersonCss.AddPerson}>
+      <button onClick={() => dispatch(addPerson())}>Add Person</button>
+    </div>
+  );
 }
 
-export default Addperson;
+export default AddPerson;
+

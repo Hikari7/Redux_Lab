@@ -1,16 +1,11 @@
-import { SET_PEOPLE, ADD_PERSON,  DELETE_PEOPLE } from "../constants/actionTypes";
+import { ADD_PERSON, DELETE_PEOPLE } from "../constants/actionTypes";
 
-export const addPerson = (id) => {
-  type: ADD_PERSON;
-  payload: id;
-};
+//()=>　の後に()で囲まないと"Actions must be plain objects."ってエラー吐かれる
+export const addPerson = () => ({
+  type: ADD_PERSON,
+});
 
-export const setPeople = (people) => {
-  type: SET_PEOPLE;
-  payload: people;
-};
-
-// export const deletePeople = (id) => {
-//   type: DELETE_PEOPLE;
-//   payload: id;
-// };
+export const deletePeople = (id) => ({
+  type: DELETE_PEOPLE,
+  payload: id,
+});

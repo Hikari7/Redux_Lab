@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./App.css";
 
-import People from "./redux/containers/People";
+import People from "./containers/People";
 
 //このpeopleがsnackInventoryのファイルにあたる
 
